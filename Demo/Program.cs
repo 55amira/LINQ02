@@ -40,6 +40,43 @@ namespace Demo
             //var result = arraylist.oftype<string>(); 
             #endregion
 
+            #region 2. Transformation Operators - Select / SelectMany
+            // 2. Transformation Operators - Select / SelectMany
+
+            //var result = ProductList.Select(P => P.ProductName);
+
+            //var result = from P in ProductList
+            //             select P.ProductName;
+
+            //var result = ProductList.Where(P => P.UnitsInStock > 0 && P.Category == "Seafood")
+            //                        .Select(P => new
+            //                        {
+            //                            P.ProductName,
+            //                            P.Category,
+            //                            OldPrice = P.UnitPrice,
+            //                            newPrice = P.UnitPrice - P.UnitPrice * 0.1M
+            //                        });
+
+            //var result = from P in ProductList
+            //             where P.UnitsInStock > 0 && P.Category == "Seafood"
+            //             select new
+            //             {
+            //                 P.ProductName,
+            //                 P.Category,
+            //                 OldPrice = P.UnitPrice,
+            //                 newPrice = P.UnitPrice - P.UnitPrice * 0.1M
+            //             };
+
+
+            // var result = CustomerList.Select(C => C.Orders);
+            //var result = CustomerList.SelectMany(C => C.Orders); // If One Of Property is sequnce
+
+            //var result = from C in CustomerList
+            //             from O in C.Orders
+            //             select O;
+
+            //var result = ProductList.Select((P, I) => new { I, P.ProductName }).Where((P, I) => I < 5); 
+            #endregion
             foreach (var unit in result)
             {
                 Console.WriteLine(unit);
