@@ -77,6 +77,65 @@ namespace Demo
 
             //var result = ProductList.Select((P, I) => new { I, P.ProductName }).Where((P, I) => I < 5); 
             #endregion
+
+            #region  3. Ordering Operator
+            // 3. Ordering Operator
+            // Sorting
+
+            //var result = ProductList.OrderBy(P => P.UnitPrice);
+            //var result = ProductList.OrderBy(P => P.UnitPrice)
+            //                        .Select(P => new
+            //                        {
+            //                            P.ProductName,
+            //                            P.UnitPrice,
+            //                            P.Category,
+            //                        });
+
+            //var result = ProductList.OrderByDescending(P => P.UnitsInStock)
+            //                        .ThenByDescending(P => P.UnitPrice)
+            //                       .Select(P => new
+            //                       {
+            //                           P.ProductName,
+            //                           P.UnitPrice,
+            //                           P.Category,
+            //                           P.UnitsInStock
+            //                       });
+
+            //var result = ProductList.OrderByDescending(P => P.UnitsInStock)
+            //                     .ThenBy(P => P.UnitPrice)
+            //                    .Select(P => new
+            //                    {
+            //                        P.ProductName,
+            //                        P.UnitPrice,
+            //                        P.Category,
+            //                        P.UnitsInStock
+            //                    });
+
+            //var result = ProductList.Where(P => P.Category == "Seafood")
+            //    .OrderByDescending(P => P.UnitsInStock)
+            //                     .ThenByDescending(P => P.UnitPrice)
+            //                    .Select(P => new
+            //                    {
+            //                        P.ProductName,
+            //                        P.UnitPrice,
+            //                        P.Category,
+            //                        P.UnitsInStock
+            //                    });
+
+            //var result = from P in ProductList
+            //             where  P.Category == "Seafood"
+            //             orderby P.UnitPrice , P.UnitsInStock > 0
+            //             select new
+            //             {
+            //                 P.ProductName,
+            //                 P.UnitPrice,
+            //                 P.Category,
+            //                 P.UnitsInStock
+
+            //             };
+
+            //var result = ProductList.Reverse<Product>(); 
+            #endregion
             foreach (var unit in result)
             {
                 Console.WriteLine(unit);
