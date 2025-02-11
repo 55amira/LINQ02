@@ -234,6 +234,20 @@ namespace Demo
 
             //HashSet< Product> result = ProductList.Where(P => P.UnitsInStock == 0).ToHashSet();  
             #endregion
+
+            #region 7. Generation OPerators 
+            // 7. Generation OPerators 
+            // the only way to call this method as -> class Member Method throught "enumerable Method "
+
+            //Range - Empty - Repeat 
+
+            //var result = Enumerable.Range(1, 100);
+
+            //var result = Enumerable.Empty<Product>().ToList();
+            //result.Add(new Product() { ProductName = "aaa" });
+
+            //var result = Enumerable.Repeat(ProductList[0], 5); 
+            #endregion
             foreach (var item in result)
             {
                 Console.WriteLine(item);
