@@ -291,11 +291,20 @@ namespace Demo
             //var result = Seq01.Contains(1);
             //Console.WriteLine(result); 
             #endregion
-            //foreach (var item in result)
-            //{
-            //    Console.Write($"{item} ");
 
-            //}
+            #region  10. Zipping Opertors
+            // 10. Zipping Opertors 
+            // List<string> Word = new List<string>() { "ten", "twenty", "thrity", "fourty" };
+            // List<int>  Numbers = new List<int>() { 10, 20, 30, 40, 50, 60 };
+
+            //var result= Word.Zip(Numbers, (W, N) => $"{N} ----> {W}"); 
+            #endregion
+
+            foreach (var item in result)
+            {
+                Console.WriteLine($"{item} ");
+
+            }
         }
     }
 }
