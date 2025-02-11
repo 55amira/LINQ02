@@ -255,7 +255,7 @@ namespace Demo
             // Union - Union All - Intersect - Except
 
             //var Seq01 = Enumerable.Range(1, 100);
-            //var Seq02 = Enumerable.Range(50, 100); ;
+            //var Seq02 = Enumerable.Range(50, 100); 
             //var result = Seq01.Union(Seq02);// like Union in Sql Without Duplication
 
             //var result = Seq01.Concat(Seq02);// like Union in Sql With Duplication
@@ -267,11 +267,35 @@ namespace Demo
             // result.Distinct();//remove Duplication 
             #endregion
 
-            foreach (var item in result)
-            {
-                Console.Write($"{item} ");
-                
-            }
+            #region 9. Quantifiers OPerators
+            // 9. Quantifiers OPerators - Return Boolean
+
+            // All - Any - SequnceEqual - Contains
+
+            //var Seq01 = Enumerable.Range(1, 100);
+            //var Seq02 = Enumerable.Range(50, 100);
+
+            //Any() Return True if there are at least one element [ in sequence or match condition ]
+
+            //var result = Seq01.Any();
+            //var result = Seq01.Any(n => n % 2 == 0);
+            //var result = ProductList.Any(P => P.UnitsInStock == 0);
+
+
+            //All() => Return True if all element match condition or sequence is empty
+            //var result = Seq01.All(n => n > 0);
+            //var result = Seq01.All(n => n % 2 == 0);
+
+            //var result = Seq01.SequenceEqual(Seq02);
+
+            //var result = Seq01.Contains(1);
+            //Console.WriteLine(result); 
+            #endregion
+            //foreach (var item in result)
+            //{
+            //    Console.Write($"{item} ");
+
+            //}
         }
     }
 }
