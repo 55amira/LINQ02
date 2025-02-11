@@ -19,6 +19,11 @@ namespace Demo
         public int Compare(Product? x, Product? y) => x.UnitsInStock.CompareTo(y.UnitsInStock);
        
     }
+    class ProductComparerUnitPrince : IComparer<Product>
+    {
+        public int Compare(Product? x, Product? y) => x.UnitPrice.CompareTo(y.UnitPrice);
+
+    }
     class Product : IComparable<Product>
     {
         public long ProductID { get; set; }
