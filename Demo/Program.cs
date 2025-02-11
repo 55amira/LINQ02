@@ -300,6 +300,68 @@ namespace Demo
             //var result= Word.Zip(Numbers, (W, N) => $"{N} ----> {W}"); 
             #endregion
 
+            #region 11. Groping Operators
+            // 11. Groping Operators
+
+            //var result = ProductList.GroupBy(P => P.Category);
+
+            //var result = from P in ProductList
+            //         group P by P.Category;
+
+            //var result = from P in ProductList
+            //             where P.UnitsInStock > 0  
+            //             group P by P.Category;
+
+            //var result = from P in ProductList
+            //             where P.UnitsInStock > 0
+            //             group P by P.Category
+            //             into Category
+            //             where Category.Count() > 12
+            //             select Category;
+
+            //var result = from P in ProductList
+            //             where P.UnitsInStock > 0
+            //             group P by P.Category
+            //            into Category
+            //             where Category.Count() > 5
+            //             select new { NameCategory = Category.Key , CategoryCount = Category.Count() };
+
+            //var result = ProductList.Where(P => P.UnitsInStock >0)
+            //                        .GroupBy(P => P.Category)
+            //                        .OrderBy(C => C.Count())
+            //                        .Where(C => C.Count()>5)
+            //                        .Select (C => new { NameCategory = C.Key, CategoryCount = C.Count() });
+
+
+            //foreach (var Category in result)
+            //{
+            //    Console.WriteLine(Category.Key);
+            //    foreach (var product in Category)
+            //    {
+            //        Console.WriteLine(product);
+
+            //    }
+            //} 
+            #endregion
+
+            #region 12. Partioning -Take -TakeLast -Skip -SkipList -TakeWhile -SkipWhile
+
+            // 12. Partioning -Take -TakeLast -Skip -SkipList -TakeWhile -SkipWhile
+
+            //var result = ProductList.Take(3);
+            // var result = ProductList.TakeLast(3);
+
+            //var result = ProductList.Skip(5);
+            //var result = ProductList.Skip(5).Take(5);
+            // var result = ProductList.SkipLast(5);
+
+            // int[] Numbers = { 9,4, 1, 2, 3, 4, 5 };
+            //var result = Numbers.TakeWhile(n => n % 3 == 0);
+            //var result = Numbers.SkipWhile(n => n % 3 == 0);
+
+            // var result = Numbers.TakeWhile((N, I) => N > I);
+            //var result = Numbers.SkipWhile((N, I) => N > I); 
+            #endregion
             foreach (var item in result)
             {
                 Console.WriteLine($"{item} ");
