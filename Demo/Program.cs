@@ -1,4 +1,6 @@
 ﻿using System.Collections;
+using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
 using System.Xml.Linq;
 using static Demo.ListGenerator;
 namespace Demo
@@ -362,6 +364,27 @@ namespace Demo
             // var result = Numbers.TakeWhile((N, I) => N > I);
             //var result = Numbers.SkipWhile((N, I) => N > I); 
             #endregion
+
+            #region Let and Into
+            // Let Into
+            //Query Syntax
+
+            //List<string> Names = new List<string>() { "Ahmed", "Ali", "Mohamed", "Moma", "Aya", "Marim" };
+
+            //var result = from Name in Names
+            //             select Regex.Replace(Name, "[aeoiuAEOIU]", string.Empty)
+            //             into NoVolName
+            //             //int0 => Restart Query with introdecing New Range Variables()
+            //             where NoVolName.Length > 3
+            //             select NoVolName;  
+
+            //var result = from Name in Names
+            //           let NoVolName=  Regex.Replace(Name, "[aeoiuAEOIU]", string.Empty)
+            //           //let  => Continue Query with Adding New Range Variables()
+            //             where NoVolName.Length > 3
+            //             select NoVolName; 
+            #endregion
+
             foreach (var item in result)
             {
                 Console.WriteLine($"{item} ");
