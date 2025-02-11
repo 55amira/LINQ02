@@ -192,11 +192,53 @@ namespace Demo
             // Console.WriteLine(result?.ProductName ?? "Na"); 
             #endregion
 
-            foreach (var unit in result)
-            {
-                Console.WriteLine(unit);
-            }
+            #region 5. Aggregate OPerators -Immediate Execution
+            //// 5. Aggregate OPerators -Immediate Execution
 
+            //// Count - Sum - Min - Avg
+
+            ////var result = ProductList.Count;
+            ////var result = ProductList.Count();
+
+            ////var result = ProductList.Count(P => P.UnitsInStock == 0);   
+            ////var result = ProductList.Where(P => P.UnitsInStock==0).Count();
+
+            ////var result = ProductList.Sum(P => P.UnitPrice);
+            //// var result = ProductList.Sum(P => P.UnitsInStock);
+
+            ////var result = ProductList.Average(P => P.UnitPrice);
+
+            ////var result = ProductList.Max();// At least one object must implement IComparable.
+
+            ////var result = ProductList.Max(new ProductComparerUnitInStock());
+
+            ////var result = ProductList.Max(P => P.UnitPrice);
+            //// var result = ProductList.MaxBy(P => P.UnitPrice);
+
+            ////var result = ProductList.MinBy(P => P.ProductName, new ProductComparerLenghtString());
+            ////var result = ProductList.MaxBy(P => P.ProductName, new ProductComparerLenghtString());
+
+            ////List<string> Names = new List<string>() { "Ahmed" , "Ail" , "Omer"};
+            ////var result = Names.Aggregate((S01, S02) => $"{S01} {S02}");
+            ////Console.WriteLine(result); 
+            #endregion
+
+            #region 6. Casting OPerators - Immediate Execution
+            // 6. Casting OPerators - Immediate Execution
+
+            //List<Product> result = (List<Product>) ProductList.Where(p => p.UnitsInStock == 0);//invaild
+            // List<Product> result = ProductList.Where(p => p.UnitsInStock == 0).ToList();
+            //Product[] result = ProductList.Where(p => p.UnitsInStock == 0).ToArray();
+
+            //Dictionary<long, Product> result = ProductList.Where(P => P.UnitsInStock == 0).ToDictionary(P => P.ProductID);
+
+            //HashSet< Product> result = ProductList.Where(P => P.UnitsInStock == 0).ToHashSet();  
+            #endregion
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+                
+            }
         }
     }
 }
