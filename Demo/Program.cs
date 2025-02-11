@@ -248,9 +248,28 @@ namespace Demo
 
             //var result = Enumerable.Repeat(ProductList[0], 5); 
             #endregion
+
+            #region 8. Set OPeration - Union Family
+
+            // 8. Set OPeration - Union Family
+            // Union - Union All - Intersect - Except
+
+            //var Seq01 = Enumerable.Range(1, 100);
+            //var Seq02 = Enumerable.Range(50, 100); ;
+            //var result = Seq01.Union(Seq02);// like Union in Sql Without Duplication
+
+            //var result = Seq01.Concat(Seq02);// like Union in Sql With Duplication
+
+            //var result = Seq01.Intersect(Seq02);
+
+            //var result = Seq01.Except(Seq02); // 1 - 49
+            // var result = Seq02.Except(Seq01); // 101 - 149
+            // result.Distinct();//remove Duplication 
+            #endregion
+
             foreach (var item in result)
             {
-                Console.WriteLine(item);
+                Console.Write($"{item} ");
                 
             }
         }
