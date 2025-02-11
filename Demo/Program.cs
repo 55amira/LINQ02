@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Xml.Linq;
 using static Demo.ListGenerator;
 namespace Demo
 {
@@ -136,6 +137,61 @@ namespace Demo
 
             //var result = ProductList.Reverse<Product>(); 
             #endregion
+
+            #region 4. Elements Operators  - Immediate Execution
+            // 4. Elements Operators  - Immediate Execution
+
+            //ProductList = new List<Product>();
+
+            // var result = ProductList.First(); // May throw Exception [ Sequence contains no elements ]
+            // var result = ProductList.Last();// May throw Exception [ Sequence contains no elements ]
+
+            //var result = ProductList.First(P => P.UnitsInStock >10000);// May throw Exception Sequence contains no matching element
+            //var result = ProductList.Last(P => P.UnitsInStock > 10);/// May throw Exception [ Sequence contains no elements ]
+
+            //var result = ProductList.FirstOrDefault();
+            //var result = ProductList.FirstOrDefault(new Product() { ProductName = " aaaa"});
+            //var result = ProductList.FirstOrDefault(P => P.UnitsInStock == 10000);
+            //var result = ProductList.FirstOrDefault(P => P.UnitsInStock == 10000, new Product() { ProductName = " aaaa" });
+
+            //var result = ProductList.LastOrDefault();
+            //var result = ProductList.LastOrDefault(new Product() { ProductName = " aaaa"});
+            //var result = ProductList.LastOrDefault(P => P.UnitsInStock == 10000);
+            //var result = ProductList.LastOrDefault(P => P.UnitsInStock == 10000, new Product() { ProductName = " aaaa" });
+
+            //var result = ProductList.ElementAt(0);// May Throw Exception [ Index was out of range. Must be non-negative and less than the size of the collection ]
+            //var result = ProductList.ElementAtOrDefault(0);
+
+            // ProductList = new List<Product>() { new Product() { ProductName = " one only  Product" }};
+            //var result = ProductList.Single();
+            // May throw exception Sequence contains no elements
+            // May throw exception Sequence contains more than one element
+
+            //var result = ProductList.Single(P => P.UnitsInStock == 0);
+            // May throw exception Sequence contains no matching element
+            // May throw exception Sequence contains more than one matching element
+
+            //var result = ProductList.SingleOrDefault();
+            // May throw exception Sequence contains more than one element
+            // Return Value [Null] If the Sequence is Empty
+
+            // var result = ProductList.SingleOrDefault(new Product() { ProductName = "Defult Value" });
+            // May throw exception Sequence contains more than one element
+            // Return Value [new Product() { ProductName = "Defult Value" }] If the Sequence is Empty
+
+            //var result = ProductList.SingleOrDefault(P => P.UnitsInStock == 0);
+            // May throw exception Sequence contains more than one element
+            // Return Value [Null] If the Sequence is Empty
+
+            //var result = ProductList.SingleOrDefault(P => P.UnitsInStock == 0 , new Product() { ProductName = "Defult Value" });
+            // May throw exception Sequence contains more than one element
+            // Return Value [new Product() { ProductName = "Defult Value" }] If the Sequence is Empty
+
+            //var result = ProductList.DefaultIfEmpty();
+
+            // Console.WriteLine(result?.ProductName ?? "Na"); 
+            #endregion
+
             foreach (var unit in result)
             {
                 Console.WriteLine(unit);
